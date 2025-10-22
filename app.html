@@ -46,7 +46,7 @@
     <div id="consentSection">
   <h2>Willkommen!</h2>
     <p>
-        In dieser kurzen Umfrage der Universität Bamberg werden Sie gebeten, einen <b>Kassenzettel</b> zu fotografieren, der <b>nicht älter als 4 Wochen</b> ist und <b>mindestens 8 Lebensmittel</b> enthält. 
+        In dieser kurzen Umfrage der Universität Bamberg werden Sie gebeten, einen <b>Kassenzettel</b> zu fotografieren, der <b>nicht älter als 4 Wochen</b> ist und <b>mindestens 5 Lebensmittel</b> enthält. 
     </p>
     <p>
         Kassenzettel lassen keinen Rückschluss auf ihre Person oder ihre Zahlungsdaten zu. Wir werten ausschließlich die gekauften Produkte aus, um mehr über das Einkaufsverhalten in Deutschland zu lernen. Durch die Teilnahme setzen Sie sich keinen Risiken aus. Für Rückfragen können Sie sich jederzeit an philipp.sprengholz@uni-bamberg.de wenden.
@@ -58,7 +58,7 @@
   <div id="photoSection" style="display:none;">
     <h2>Ihr Kassenzettel</h2>
     <p>Sie können Ihren Kassenzettel fotografieren oder aus der Fotogallerie hochladen. Wenn Sie einen Kassenzettel aus einer Supermarkt-App (z.B. LIDL Plus, REWE App) hochladen möchten, müssen sie diesen zunächst aus der App in die Fotogallerie exportieren.</p>
-    <p>Wichtig: Ihr Kassenzettel sollte <b>nicht älter als 4 Wochen</b> sein und <b>mindestens 8 Lebensmittel</b> enthalten. <b>Alle Produkte und die Gesamtsumme müssen sichtbar sein</b>, übrige Details können abgeschnitten sein.</p>
+    <p>Wichtig: Ihr Kassenzettel sollte <b>nicht älter als 4 Wochen</b> sein und <b>mindestens 5 Lebensmittel</b> enthalten. <b>Alle Produkte und die Gesamtsumme müssen sichtbar sein</b>, übrige Details können abgeschnitten sein.</p>
     <input type="file" id="photoInput" accept="image/*" style="display:none;">
     <button id="openCameraBtn">Kassenzettel aufnehmen</button>
     <img id="previewImg" style="display:none;" alt="Photo preview">
@@ -70,8 +70,8 @@
   <div id="successSection" style="display:none;">
     <h2>Danke!</h2>
     <p>Ihr Kassenzettel wurde erfolgreich übertragen.</p>
-    <p>Wir werden Sie in einigen Wochen über Prolific zu einer längeren Studie einladen, in der wir Ihnen weitere Fragen zu Ihrem Einkaufsverhalten möchten. Wir würden uns freuen, wenn Sie ebenfalls daran teilnehmen.</p>
-    <button id="returnButton" onclick="location.href = 'https://google.com';">Zurück zu Prolific</button>
+    <p>Wir werden Sie in einigen Wochen über Prolific zu einer längeren Studie einladen, in der wir Ihnen weitere Fragen zu Ihrem Einkaufsverhalten stellen möchten. Wir würden uns freuen, wenn Sie daran teilnehmen.</p>
+    <button id="returnButton" onclick="location.href = 'https://app.prolific.com/submissions/complete?cc=CMOBZG5X';">Zurück zu Prolific</button>
   </divY>
 </main>
 
@@ -147,7 +147,7 @@
       return;
     }
 
-    uploadStatus.textContent = "Kassenzettel wird hochgeladen...";
+    uploadStatus.textContent = "Kassenzettel wird hochgeladen. Bitte warten...";
     submitBtn.disabled = true;
 
     try {
